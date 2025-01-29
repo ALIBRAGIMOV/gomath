@@ -23,6 +23,6 @@ func main() {
 	nums := []int{0, 1, 2, 3, 4, 5, 6, 7}
 	nums2 := []int{1, 4, 5, 2, 3, 6, 7, 8}
 
-	fmt.Println(sortArrayByParityII(nums))
-	fmt.Println(sortArrayByParityII(nums2))
+	fmt.Println(sortArrayByParityII(nums))  // [0 1 2 3 4 5 6 7]
+	fmt.Println(sortArrayByParityII(nums2)) // [4 1 2 5 6 3 8 7]
 }
