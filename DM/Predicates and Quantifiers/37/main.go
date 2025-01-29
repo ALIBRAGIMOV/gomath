@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-	"slices"
 )
 
-// Solved 37 exercise
+// Solve 37 exercise
 
 // ------------------------------
 // A. Elite Flyer Qualification
@@ -128,57 +127,4 @@ func main() {
 	student4 := Student{name: "David", hours: 60, thesis: true, grade: "B", credit: 22}
 	fmt.Printf("Does %s have more than 21 credit hours and receive all A's? %v\n", student3.name, qualifiesForAllA(student3))
 	fmt.Printf("Does %s have more than 21 credit hours and receive all A's? %v\n", student4.name, qualifiesForAllA(student4))
-}
-
-func sortArrayByParityII(nums []int) []int {
-	slices.Sort()
-	resp := make([]int, len(nums))
-
-	// [4,1,2,1]
-	// or
-	// [4,2,1,1]
-	// [1,2,1,4]
-	// lastEven and lastOdd
-	lastEven := 0
-	lastOdd := 0
-
-	for i := 0; i < len(nums); i++ {
-		if isEven(i) {
-			if isEven(nums[i]) {
-				resp[i] = nums[i]
-			} else {
-				if isEven(nums[lastEven]) {
-					resp[i] = nums[lastEven]
-				}
-				lastOdd = i
-			}
-		} else {
-			if !isEven(nums[i]) {
-				resp[i] = nums[i]
-			} else {
-				if !isEven(nums[lastOdd]) {
-					resp[i] = nums[lastOdd]
-				}
-				lastEven = i
-			}
-		}
-
-		if !isEven(lastEven) && !isEven(nums[lastOdd]) {
-			resp[lastEven] = nums[lastOdd]
-		}
-
-		if isEven(lastOdd) && isEven(nums[lastEven]) {
-			resp[lastOdd] = nums[lastEven]
-		}
-
-		fmt.Println(resp)
-		fmt.Println(lastEven)
-		fmt.Println(lastOdd)
-	}
-
-	return resp
-}
-
-func isEven(num int) bool {
-	return num%2 == 0
 }
