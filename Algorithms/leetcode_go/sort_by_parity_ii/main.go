@@ -19,6 +19,8 @@ func sortArrayByParityII(nums []int) []int {
 	return nums
 }
 
+// implementation for https://leetcode.com/problems/sort-array-by-parity-ii/description/
+
 func main() {
 	nums := []int{0, 1, 2, 3, 4, 5, 6, 7}
 	nums2 := []int{1, 4, 5, 2, 3, 6, 7, 8}
