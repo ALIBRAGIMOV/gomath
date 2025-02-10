@@ -1,0 +1,2 @@
+- https://leetcode.com/explore/featured/card/system-design-for-interviews-and-beyond/ – this is a killer course, absolutely every SWE should take it 
+- https://www.educative.io/courses/grokking-the-system-design-interview

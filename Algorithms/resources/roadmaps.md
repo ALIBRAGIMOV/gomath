@@ -1,0 +1,1 @@
+- how prepare coding interview https://www.designgurus.io/blog/the-roadmap-to-clearing-technical-interview-in-2024
