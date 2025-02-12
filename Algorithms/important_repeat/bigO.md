@@ -201,5 +201,6 @@ func findDuplicates(arr []int) []int {
 
 ✅ **Explain your choices clearly in interviews.**
 
-🚀 **Practice regularly, and you'll ace any complexity question!**
+🚀 **TODO improve this page do it more informal and add more interesting cases for understating,
+and cases for how start and chose correct interview Questions step by step solver**
 
