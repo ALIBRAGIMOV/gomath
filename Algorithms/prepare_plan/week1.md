@@ -5,9 +5,10 @@
 ---
 
 ## **Workdays (1.5 - 2 hours per day)**
+## with pomofocus
 ### **Monday - Friday**
 
-- **20 min** - Theory & Pattern Recognition
+- **35 min** - Theory & Pattern Recognition
     - Learn **Binary Search Fundamentals**
     - Study **Variations**: Lower Bound, Upper Bound, Binary Search on Answer
     - Analyze **Common Edge Cases & Pitfalls**
@@ -15,12 +16,12 @@
 - **10-20 min** - Active Recall & Spaced Repetition
     - **ANKI Flashcards** - Coding Interview (Algorithms)
 
-- **60 min** - Daily Problem Solving
+- **50 min** - Daily Problem Solving
     - Solve **2-3 problems** (Easy → Medium difficulty)
     - Implement **both Iterative & Recursive approaches**
     - Focus on **Pivot Selection & Search Space Reduction**
 
-- **20 min** - Code Review & Optimization
+- **10 min** - Code Review & Optimization
     - Compare **Brute-force vs Optimized Solutions**
     - Study **Top-rated Discussions & Solutions**
     - Take notes on **Patterns & Key Tricks**
