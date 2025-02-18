@@ -4,10 +4,20 @@
 
 ---
 
-## **Workdays (1.5 - 2 hours per day)**
-## with pomofocus
-### **Monday - Friday**
+**Time plan with pomofocus :**
+- **08:00 - 08:45** → **Theory & Concept** (Binary Search Basics) (Algo.monster)
+- 5 min break
+- **08:50 - 09:00** → **Active Recall & Anki Review** (Flashcards, Key Takeaways)
+- 5 min break
+- 💡repeat before problem solving 
+- - **[simulation](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/important_repeat/simulation_cod_problems.md)** - **[plan how solving](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/important_repeat/leetcode_plan_how.md)** - **[problem solving template](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/prepare_plan/problem_solvin_template.md)**
+- **09:05 - 09:50** → **Problem Solving** **45 min**
+- 5 min break
+- **09:50 - 10:35** → **Problem Solving** **45 min**
 
+## **Workdays (1.5 - 2 hours per day)**
+### **Monday - Friday**
+- only by time plan - and additional more details
 - **35 min** - Theory & Pattern Recognition
     - Learn **Binary Search Fundamentals**
     - Study **Variations**: Lower Bound, Upper Bound, Binary Search on Answer
@@ -30,6 +40,7 @@
 
 ## **Holidays (4 - 6 hours per day)**
 ### **Saturday**
+- only by time plan - and additional more details
 
 - **1 hour** - Review & Reinforcement
     - Summarize **Key Patterns & Mistakes**
@@ -94,7 +105,8 @@
 
 ---
 
-## **Week 1 Outcome**
-✅ **Master Binary Search Variants**  
-✅ **Develop Strong Pattern Recognition**  
-✅ **Improve Speed & Accuracy in Coding Interviews**  
+### **Why This Routine Works?**
+✔ **Structured Time Management** – Ensures all aspects of problem-solving are covered.  
+✔ **Gradual Difficulty Progression** – Starts with basics and builds up to hard problems.  
+✔ **Active Recall & Review** – Reinforces concepts and boosts problem-solving speed.  
+✔ **Mock Interview Prep** – Mimics real coding interviews to improve performance.
