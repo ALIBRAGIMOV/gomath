@@ -10,7 +10,7 @@
 - **08:50 - 09:00** → **Active Recall & Anki Review** (Flashcards, Key Takeaways)
 - 5 min break
 - 💡repeat before problem solving 
-- - **[simulation](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/important_repeat/simulation_cod_problems.md)** - **[plan how solving](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/important_repeat/leetcode_plan_how.md)** - **[problem solving template](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/prepare_plan/problem_solvin_template.md)**
+- - **[simulation](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/important_repeat/simulation_cod_problems.md)** - **[plan how solving](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/important_repeat/leetcode_plan_how.md)** - **[problem-solving template](https://github.com/ALIBRAGIMOV/gomath/blob/main/Algorithms/prepare_plan/problem_solving_template.md)**
 - **09:05 - 09:50** → **Problem Solving** **45 min**
 - 5 min break
 - **09:50 - 10:35** → **Problem Solving** **45 min**
