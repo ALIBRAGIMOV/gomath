@@ -1,0 +1,1 @@
+- Data Structure implementation based best practice on go

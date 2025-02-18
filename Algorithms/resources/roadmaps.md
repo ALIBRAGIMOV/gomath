@@ -1,1 +1,5 @@
-- how prepare coding interview https://www.designgurus.io/blog/the-roadmap-to-clearing-technical-interview-in-2024
+- how prepare coding interview - https://www.designgurus.io/blog/the-roadmap-to-clearing-technical-interview-in-2024
+- how do it coding interview with best practice - https://github.com/jwasham/coding-interview-university
+- 
+- greate information about hiring processes and more - https://interviewing.io/guides/hiring-process
+- https://interviewing.io/guides/hiring-process/google#google
