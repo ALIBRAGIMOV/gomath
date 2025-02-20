@@ -60,6 +60,42 @@ func printPairs(arr []int) {
 
 ### **Recursive Complexity Analysis**
 #### **Example 3: Logarithmic Complexity (O(log n))**
+- Sure, logarithmic time complexity is one of the fundamental concepts in computer science related to the performance of algorithms, and it is denoted as O(log(N)).
+
+Logarithmic Function:
+A logarithm is the inverse function of exponentiation. The logarithm of a number is the exponent to which another fixed number, the base, must be raised to produce that number. In simpler terms, if we have an equation:
+
+b^x = N
+Then the logarithm of N to the base b is x:
+
+log_b(N) = x
+Logarithmic Time Complexity:
+When we say an algorithm has a logarithmic time complexity, we mean that the time it takes to complete its execution is proportional to the logarithm of the size of the input. As the input size (N) grows, the number of steps (or operations) the algorithm takes grows logarithmically.
+
+An important property of logarithms is that they grow very slowly. Doubling the size of the input doesn't double the amount of work; it just adds a constant amount of extra work. This makes O(log(N)) algorithms very efficient for large N.
+
+Examples and Intuition:
+Binary Search: Consider a sorted array of numbers. You want to find if a particular number is in the array. A binary search algorithm would start by comparing the target number with the middle element of the array. If it's not a match, it ignores one half of the array and continues the same process with the remaining half. This halving continues until the element is found or the subset becomes empty. In each step, the problem size is reduced by half, which leads to a O(log(N)) time complexity.
+
+Balanced Binary Search Tree (BST) Lookup: Similar to binary search, every time you traverse from a node to one of its children in a balanced BST, you are essentially halving the path to the particular node you are looking for.
+
+Visualizing Logarithmic Growth:
+To visualize logarithmic growth, you can think of it as the number of times you can divide N by 2 before getting to 1:
+
+N = 16
+
+16 -> 8 -> 4 -> 2 -> 1 (Logarithmic steps: 4)
+If you plot the function y = log_b(N), you'll notice it increases to infinity as N goes to infinity, but it does so very gradually compared to a linear growth which is represented as a straight line or quadratic growth that forms a parabola with a steep increase.
+
+Mathematical Properties:
+Some properties of logarithms relevant to time complexity analysis include:
+
+log_b(M * N) = log_b(M) + log_b(N)
+log_b(M/N) = log_b(M) - log_b(N)
+log_b(M^k) = k * log_b(M)
+If the base of the logarithm isn't specified, it's often assumed to be 2 for computational complexity analysis since algorithms often involve dividing data into halves (binary operations).
+In computational complexity, constants and less significant terms are usually ignored because they don't affect the growth rate as N becomes very large. Thus O(log_2(N)), O(log_10(N)), and O(log_e(N)) are all considered equivalent and are simplified to O(log(N)) in Big O notation. The base of the logarithm is less important in the context of Big O notation since logarithms of different bases are only different by a constant factor, and Big O notation ignores constants.
+
 ```go
 func binarySearch(arr []int, target int) int {
     lo, hi := 0, len(arr)-1

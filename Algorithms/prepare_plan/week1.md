@@ -14,6 +14,7 @@
 - **09:05 - 09:50** → **Problem Solving** **45 min**
 - 5 min break
 - **09:50 - 10:35** → **Problem Solving** **45 min**
+- 15 min break
 
 ## **Workdays (1.5 - 2 hours per day)**
 ### **Monday - Friday**
