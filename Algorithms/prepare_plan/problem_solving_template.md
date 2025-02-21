@@ -135,6 +135,8 @@ Use this guide to structure your approach for coding interviews and daily practi
 4. **Optimization After Correctness**
     - First, ensure your solution **works correctly**.
     - Then, analyze performance and optimize as needed.
+- TODO BEFORE RUNTIME ON LEETCODE (and other), need check 1-2 min error and bugs
+- TODO AND imagine all corner cases in brain (mind) - example 1000000 items and how app do work
 
 5. **Systematic Testing**
     - Always test your code with **normal**, **edge**, and **extreme** cases.
