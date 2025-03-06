@@ -72,7 +72,7 @@
 ### **Day 1: Basics of Binary Search**
 - [Binary Search](https://leetcode.com/problems/binary-search/) 🔹 *Easy* - ✅
 - [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) 🔹 *Easy* -  ✅ - https://leetcode.com/problems/guess-number-higher-or-lower/post-solution?submissionId=1550692690
-- [First Bad Version](https://leetcode.com/problems/first-bad-version/) 🔹 *Easy*
+- [First Bad Version](https://leetcode.com/problems/first-bad-version/) 🔹 *Easy* - ✅
 
 ### **Day 2: Binary Search on Sorted Arrays**
 - [Search Insert Position](https://leetcode.com/problems/search-insert-position/) 🔹 *Easy*
