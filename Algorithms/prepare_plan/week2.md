@@ -29,6 +29,7 @@ Enhance your efficiency, accuracy, and speed in solving **Two-Pointer** problems
 | Thursday  | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)    | Hard       |
 | Friday    | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium     |
 | Saturday  | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard       |
+| sunday    | [get-the-maximum-score](https://leetcode.com/problems/get-the-maximum-score/description/) | Hard       |
 | Sunday    | Review all solved problems without hints                                     | Mixed      |
 
 - Use **Pomodoro** timer: strict 30-min limit per problem. Initially, allow up to 45 mins for harder problems and reduce with improvement.

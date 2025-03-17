@@ -15,7 +15,7 @@ The **Prefix Sum Pattern** (or **Cumulative Sum**) is a common technique in algo
 ### 2. Implementation
 
 ```go
-// subarraySum - small template ofr prefixSums
+// subarraySum - small template for prefixSums
 func subarraySum(arr []int, target int) []int {
     prefixSums := map[int]int{0: 0}
     currentSum := 0
