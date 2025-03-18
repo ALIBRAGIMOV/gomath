@@ -1,6 +1,6 @@
 - https://algo.monster/problems/simulation_intro
 
-# 🚀 **Comprehensive Simulation Problem-Solving Routine for FAANG+ Coding Interviews**
+# ** Simulation Problem-Solving**
 
 This detailed routine incorporates best practices from neuroscience, elite coding interview strategies, and top-tier FAANG+ preparation techniques. Follow this protocol daily to simulate interview scenarios and maximize your performance.
 
