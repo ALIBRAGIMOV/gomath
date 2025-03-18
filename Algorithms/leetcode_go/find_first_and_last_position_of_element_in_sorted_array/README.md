@@ -36,27 +36,28 @@ package main
 import "fmt"
 
 func searchRange(nums []int, target int) []int {
-    left := findFirst(nums, target)
-    right := findFirst(nums, target+1) - 1
+	left, right := findFirst(nums, target), findFirst(nums, target+1)
 
-    // Ensure the target exists in range
-    if left <= right && right < len(nums) && nums[left] == target && nums[right] == target {
-        return []int{left, right}
-    }
-    return []int{-1, -1}
+	if left == right {
+		return []int{-1, -1}
+	}
+
+	return []int{left, right-1}
 }
 
 func findFirst(nums []int, target int) int {
-    left, right := 0, len(nums)
-    for left < right {
-        mid := left + (right-left)/2 // Avoids overflow
-        if nums[mid] < target {
-            left = mid + 1
-        } else {
-            right = mid
-        }
-    }
-    return left
+	left, right := 0, len(nums)
+	
+	for left < right {
+		mid := int(uint(left+right)>>1)
+		
+		if nums[mid] < target {
+			left = mid + 1
+		} else {
+			right = mid
+		}
+	}
+	return left
 }
 
 func main() {
