@@ -1,102 +1,118 @@
-# 📌 **Find First and Last Position of Element in Sorted Array**
+# Understanding the Sliding Window Algorithm for Finding the Longest Substring Without Repeating Characters
 
-## 📝 **Problem Statement**
-Given a sorted array `nums` in non-decreasing order, find the starting and ending position of a given `target` value.
-
-If `target` is not found in the array, return `[-1, -1]`.
-
-### **Constraints:**
-- Must run in **O(log n)** time complexity.
+## 🚀 Problem Statement
+Given a string `s`, find the length of the longest substring without repeating characters.
 
 ---
 
-## 🚀 **Optimized Approach Using Binary Search**
-Since the array is sorted, we use **binary search** twice:
-1. **Find first occurrence** of `target`.
-2. **Find first occurrence of `target+1`**, then subtract `1` to get the last occurrence.
+## 🔍 Solution Approach: Sliding Window with a Hash Map
 
-This ensures an **O(log n)** time complexity instead of a linear scan.
+### **Key Variables & Their Roles**
+- **`l` (Left Pointer)** – Marks the beginning of the current substring.
+- **`r` (Right Pointer)** – Expands the substring by iterating through `s`.
+- **`lastSeen` (Hash Map `map[string]int`)** – Stores the last seen index of each character.
+- **`maxLen` (Maximum Length Found)** – Tracks the longest substring encountered so far.
 
-### 🔹 **Binary Search Helper Function (findFirst)**
-- Finds the leftmost index where `target` appears.
-- If `target` is missing, it returns the insertion index.
-
-### 🔹 **Main Function (searchRange)**
-- Calls `findFirst(nums, target)` to get **left boundary**.
-- Calls `findFirst(nums, target+1) - 1` to get **right boundary**.
-- Ensures correctness before returning the result.
+### **Core Idea**
+1. Move `r` (right pointer) through the string while adding characters to the window.
+2. If a character is already in `lastSeen` **and** within the window (`lastSeen[char] >= l`), move `l` to skip past the duplicate.
+3. Update `lastSeen[char]` with the new index of `char`.
+4. Update `maxLen` with the current window size (`r - l + 1`).
 
 ---
 
-## 💻 **Go Implementation**
+## 📝 Code Implementation
 
 ```go
-package main
-
-import "fmt"
-
-func searchRange(nums []int, target int) []int {
-    left := findFirst(nums, target)
-    right := findFirst(nums, target+1) - 1
-
-    // Ensure the target exists in range
-    if left <= right && right < len(nums) && nums[left] == target && nums[right] == target {
-        return []int{left, right}
+func lengthOfLongestSubstring(s string) int {
+    if len(s) == 0 {
+        return 0
     }
-    return []int{-1, -1}
-}
 
-func findFirst(nums []int, target int) int {
-    left, right := 0, len(nums)
-    for left < right {
-        mid := left + (right-left)/2 // Avoids overflow
-        if nums[mid] < target {
-            left = mid + 1
-        } else {
-            right = mid
+    lastSeen := make(map[string]int) // Track the last index of each character as a string
+    l, maxLen := 0, 0
+
+    for r := 0; r < len(s); r++ {
+        char := string(s[r]) // Convert only once per iteration
+
+        // If character is found and is within the current window, move l forward
+        if lastIdx, found := lastSeen[char]; found && lastIdx >= l {
+            l = lastIdx + 1 // Shift left pointer past the duplicate
         }
+
+        lastSeen[char] = r // Update last seen index
+        maxLen = max(maxLen, r-l+1) // Update max length
     }
-    return left
+
+    return maxLen
 }
 
-func main() {
-    nums := []int{5, 7, 7, 8, 8, 10}
-    target := 8
-    fmt.Println(searchRange(nums, target)) // Output: [3, 4]
+func max(a, b int) int {
+    if a > b {
+        return a
+    }
+    return b
 }
 ```
 
 ---
 
-## 📊 **Binary Search Execution Breakdown**
-Example Input: `nums = [5,7,7,8,8,10], target = 8`
+## 🔬 **Deep Dive: `lastIdx` Explanation**
+### What is `lastIdx`?
+`lastIdx` represents the **last recorded index** of the character `char` in the `lastSeen` map. When `char` is found in `lastSeen`, it means that this character was previously encountered at index `lastIdx`.
 
-| Iteration | `left` | `right` | `mid` | `nums[mid]` | Action Taken |
-|-----------|--------|---------|-------|------------|--------------|
-| 1         | 0      | 6       | 3     | 8          | Move `right = mid` |
-| 2         | 0      | 3       | 1     | 7          | Move `left = mid + 1` |
-| 3         | 2      | 3       | 2     | 7          | Move `left = mid + 1` |
-| 4         | 3      | 3       | -     | -          | Found first at index `3` |
+### Why Do We Check `lastIdx >= l`?
+If `lastIdx` is **before** `l`, it means that the previous occurrence of `char` is no longer part of the active window, so we **don't** need to move `l`.
 
-Then, repeat for `target + 1 = 9` to find `right = 4`.
+If `lastIdx >= l`, the character is inside our window, meaning a duplicate exists. Thus, we **must** move `l` to `lastIdx + 1` to remove the duplicate from the window.
 
----
-
-## ✅ **Final Output**
-```plaintext
-Input: nums = [5,7,7,8,8,10], target = 8
-Output: [3, 4]
+### Example Walkthrough: `s = "abcabcbb"`
+#### **Initialization:**
+```
+s = "abcabcbb"
+lastSeen = {}  // Empty map
+l = 0, maxLen = 0
 ```
 
+#### **Step-by-Step Execution:**
+| `r` | `s[r]` | `lastSeen` (stored index) | `l` (left pointer) | `r - l + 1` (window size) | `maxLen` |
+|----|----|----------------|----|----|----|
+| 0  | 'a' | `{a: 0}` | 0  | 1  | 1  |
+| 1  | 'b' | `{a: 0, b: 1}` | 0  | 2  | 2  |
+| 2  | 'c' | `{a: 0, b: 1, c: 2}` | 0  | 3  | 3  |
+| 3  | 'a' | `{a: 3, b: 1, c: 2}` | **1** | 3  | 3  |
+| 4  | 'b' | `{a: 3, b: 4, c: 2}` | **2** | 3  | 3  |
+| 5  | 'c' | `{a: 3, b: 4, c: 5}` | **3** | 3  | 3  |
+| 6  | 'b' | `{a: 3, b: 6, c: 5}` | **5** | 2  | 3  |
+| 7  | 'b' | `{a: 3, b: 7, c: 5}` | **7** | 1  | 3  |
+
+✅ **Final Answer**: `maxLen = 3` (longest substring: "abc").
+
 ---
 
-## 🏆 **Key Takeaways**
-- **Two binary searches** ensure an **O(log n)** solution.
-- **Bounds checking is essential** after search to confirm correctness.
-- **Edge cases:**
-    - `nums` is empty → `[-1, -1]`
-    - `target` not found → `[-1, -1]`
-    - `nums` has only one occurrence of `target` → returns correct index range.
+## 📈 Complexity Analysis
+| Complexity | Calculation |
+|------------|-------------|
+| **Time Complexity** | **O(n)** - Each character is processed at most twice (once by `r`, once by `l`). |
+| **Space Complexity** | **O(min(n, |Σ|))** - The map stores at most `n` entries or `|Σ|` (alphabet size). |
 
-By following this structured binary search approach, we can efficiently find the range of `target` in a sorted array while ensuring **optimal time complexity.** 🚀
+- **Best case:** `O(1)` space (small alphabet, e.g., all lowercase English letters).
+- **Worst case:** `O(n)` space (all unique characters in a large string).
+
+---
+
+## ✅ Why This Approach Works Best
+1. **Sliding Window Efficiency** – The left pointer only moves **forward**, ensuring `O(n)` time complexity.
+2. **Hash Map for Quick Lookups** – `lastSeen[char]` provides `O(1)` time complexity for checking duplicates.
+3. **No Extra Allocations** – No substring slicing, no extra arrays, only `map` storage.
+
+---
+
+## 🔥 Summary
+- **Move `r` to expand the window**.
+- **Use `map` to track last-seen indices**.
+- **If `s[r]` repeats, move `l` past the last occurrence**.
+- **Update `maxLen` dynamically**.
+
+💡 **Sliding Window + Hash Map = Optimal O(n) solution!** 🚀
 
