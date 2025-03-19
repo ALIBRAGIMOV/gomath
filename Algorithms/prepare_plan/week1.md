@@ -80,8 +80,8 @@
 - [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) 🔸 *Medium* ✅
 
 ### **Day 3: Variations - Lower & Upper Bound**
-- [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) 🔸 *Medium*
-- [Find Peak Element](https://leetcode.com/problems/find-peak-element/) 🔸 *Medium*
+- [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) 🔸 *Medium* ✅
+- [Find Peak Element](https://leetcode.com/problems/find-peak-element/) 🔸 *Medium* ✅
 - [Find Kth Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) 🔥 *Hard*
 
 ### **Day 4: Binary Search on Answer**
@@ -105,9 +105,3 @@
 - **Timed Mock Interview** (LeetCode, AlgoMonster, or Pramp)
 
 ---
-
-### **Why This Routine Works?**
-✔ **Structured Time Management** – Ensures all aspects of problem-solving are covered.  
-✔ **Gradual Difficulty Progression** – Starts with basics and builds up to hard problems.  
-✔ **Active Recall & Review** – Reinforces concepts and boosts problem-solving speed.  
-✔ **Mock Interview Prep** – Mimics real coding interviews to improve performance.
